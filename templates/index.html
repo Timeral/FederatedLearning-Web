@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+{% block web_title %}首页{% endblock web_title %}
+{% block big_title %}联邦学习{% endblock big_title %}
+{% block content %}
+{% if msg %}
+    <script> alert('{{msg}}');location = '/index/'</script>
+{% endif %}
+<!--ContentHere-->
+<el-empty description="等待完善"></el-empty>
+{% endblock content%}

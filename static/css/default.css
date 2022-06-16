@@ -1,0 +1,377 @@
+@charset "utf-8";
+
+html,body,#app,.el-container {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+.startcover {
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+a:link {
+
+    text-decoration: none;
+
+}
+
+a:visited {
+    color: rgb(0, 217, 255);
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+a:active {
+    color: purple;
+}
+
+a {
+    font-weight: normal;
+}
+
+#Htitle {
+    font-size: 80px;
+    color: black;
+    line-height: 250px;
+}
+
+/* echarts图表样式 */
+#x1 {
+    width: 100%;
+    height: 15%;
+    margin: -2%;
+}
+
+/* 时间样式 */
+#jikan {
+    color: #000000;
+    font-weight: 900;
+    position: relative;
+    bottom: 30px;
+    font-size: larger;
+}
+
+@media all and (max-width: 960px) {
+    body {
+        background-repeat: no-repeat;
+        background-size: vmax;
+        background-attachment: fixed;
+        background-position: center center;
+        filter: alpha(opacity=90);
+        -moz-opacity: 0.9;
+        opacity: 0.9;
+    }
+
+    #jikan {
+        color: white;
+        font-weight: bold;
+        position: relative;
+        bottom: 30px;
+    }
+
+    .startcover {
+        width: 100%;
+        height: 250px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #wyy {
+        width: 100%;
+        padding-left: 0%;
+        padding-right: 0%;
+        height: 500px;
+    }
+}
+
+.dynamic_dots_container {
+    width: 500px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    margin: auto;
+}
+
+
+/* 日历样式 */
+
+#cldFrame {
+    position: relative;
+    width: 440px;
+    margin: 15px auto;
+}
+
+#cldBody {
+    margin: 10px;
+    position: relative;
+    width: 420px;
+}
+
+#top {
+    position: relative;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+
+#topDate {
+    font-size: 30px;
+}
+
+.curDate {
+    color: red;
+    font-weight: bold;
+}
+
+table {
+    background-color: #f7f7f7;
+}
+
+#week td {
+    font-size: 15px;
+}
+
+td {
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    font-family: Simsun;
+    font-size: 20px;
+}
+
+#left,
+#right {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+}
+
+#left {
+    left: 0px;
+}
+
+#right {
+    right: 0px;
+}
+
+#left:hover,
+#right:hover {
+    background-color: rgba(30, 30, 30, 0.2);
+}
+
+/* count 界面查询按钮 */
+#count_chaxun {
+    margin-right: 1.6%;
+}
+
+
+/* 登录/注册样式 */
+
+.mainbody {
+    width: auto;
+    height: 24.6em;
+    position: relative;
+    left: 10%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    margin-right: 20%;
+    background-color: darkgray;
+    padding-top: 5%;
+    border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
+    filter: alpha(opacity=75);
+    -moz-opacity: 0.75;
+    opacity: 0.75;
+}
+
+.mainbody2 {
+    width: auto;
+    height: 60%;
+    position: relative;
+    left: 10%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    margin-right: 20%;
+    background-color: darkgray;
+    padding-top: 5%;
+    border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
+    filter: alpha(opacity=75);
+    -moz-opacity: 0.75;
+    opacity: 0.75;
+}
+
+.form-box {
+    width: 90%;
+    height: 10em;
+    position: relative;
+    left: 5%;
+    top: 1%;
+    margin-bottom: 10%;
+    background-color: #ffffff63;
+    border-radius: 10px 10px 10px 10px;
+    padding-top: 2rem;
+}
+
+.form-box2 {
+    width: 90%;
+    height: auto;
+    position: relative;
+    left: 5%;
+    top: -1%;
+    margin-bottom: 5%;
+    background-color: #ffffff63;
+    border-radius: 10px 10px 10px 10px;
+    padding-top: 2rem;
+    padding-bottom: 0.5%;
+}
+
+.switch-box {
+    width: 60%;
+    height: 2.5rem;
+    left: 20%;
+    top: 5rem;
+    margin-bottom: 5%;
+    padding-top: 0.3rem;
+    font-size: 0.8rem;
+    text-align: center;
+    position: relative;
+    background-color: #ffffff63;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.input-normal {
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    padding: 1%;
+    padding-left: 5%;
+    text-align: left;
+    border-radius: 20px;
+    outline: none;
+    display: block;
+    transition: 0.3s;
+    border: 1px solid #e6e6e6d0;
+}
+
+.btn-submit {
+    width: 6em;
+    height: 6em;
+    margin: auto;
+    position: relative;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(74, 74, 74);
+    border-radius: 3rem;
+    display: block;
+    background: rgba(255, 255, 255, 0.904);
+    transition: 0.4s;
+    outline: none;
+}
+
+.front {
+    transform: rotateY(0deg) perspective(600px);
+    position: relative;
+}
+
+.back {
+    transform: rotateY(-180deg) perspective(600px);
+    position: relative;
+}
+
+.front,
+.back {
+    position: relative;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    /* Chrome 和 Safari */
+    transition: 0.4s linear;
+}
+
+.dis {
+    display: none;
+}
+
+.middle {
+    position: relative;
+}
+
+/* 将front旋转180度 */
+.middle-flip .front {
+    transform: rotateY(180deg) perspective(600px);
+    position: relative;
+}
+
+/* 将back旋转180度 */
+.middle-flip .back {
+    transform: rotateY(0deg) perspective(600px);
+    position: relative;
+}
+
+/* 登出按钮 */
+.btn {
+    width: auto;
+    color: white;
+    margin: -5%;
+}
+
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+}
+.header {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 70px;
+  font-size: 22px;
+}
+.header .logo {
+  float: left;
+  margin-left: 60px;
+  margin-top: 17.5px;
+  height: 29px;
+  width: 160px;
+  vertical-align: middle;
+}
+/* --------------- 用户头像区域的样式 ---------------- */
+.header-right {
+  float: right;
+  padding-right: 50px;
+}
+.header-user-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+}
+.user-avator {
+  margin-left: 20px;
+}
+.user-avator img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.user-name {
+  margin-left: 10px;
+}
+.el-dropdown-link {
+  cursor: pointer;
+}
+.el-dropdown-menu__item {
+  text-align: center;
+}

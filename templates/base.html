@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="/static/images/favicon.ico" rel="shortcut icon">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>{% block web_title %}记得写标题！{% endblock web_title %}</title>
+    <!--cdn引入ElementUI组件必须先引入Vue-->
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <!-- 引入样式 -->
+    <link href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" rel="stylesheet">
+    <!-- cdn引入ElementUI组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <link href="/static/css/default.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+
+    <!--    导航栏标题     -->
+    <div class="header">
+        <div class="logo">{% block big_title %}{% endblock big_title %}</div>
+        <div style="float:left;">
+            {% block nav_bar %}
+            {% verbatim %}
+            <el-menu :default-active="activeIndex" @select="handleSelect" class="el-menu-demo" mode="horizontal">
+                <el-menu-item :index="item.name" v-for="item in navList">
+                    <a :href="item.name">{{ item.navItem }}</a>
+                </el-menu-item>
+            </el-menu>
+            {% endverbatim %}
+
+            <!--    导航栏按钮部分     -->
+            {% endblock nav_bar %}
+        </div>
+        <div class="header-right">
+            <div class="header-user-con">
+                <!-- 用户头像 -->
+                <div class="user-avator">
+                    <img src={% if avatar %} "{{avatar}}"{% else %}"/static/images/user/logo_default.jpg"{% endif %}/>
+                </div>
+                <!-- 用户名下拉菜单 -->
+                <el-dropdown @command="handleCommand" class="user-name" trigger="click">
+                    <span class="el-dropdown-link">{{user.get_short_name}} <i class="el-icon-caret-bottom"></i></span>
+                    <el-dropdown-menu slot="dropdown">
+                        <el-dropdown-item command="changePass">修改密码</el-dropdown-item>
+                        <el-dropdown-item command="logout">注销</el-dropdown-item>
+                    </el-dropdown-menu>
+                </el-dropdown>
+            </div>
+        </div>
+    </div>
+    <br>
+    {% block content %}
+    请填充内容
+    {% endblock content %}
+    <!--    页尾部分     -->
+    {% block ending %}
+    <footer style="background-color: darkgray;position: relative;bottom: 0px;left: 0%;right: 0%;">
+        <div style="padding: 2px;">
+            <a style="font-size: .6em;text-align:center;"> Copyright &copy; 2022</a>
+            <div></div>
+        </div>
+    </footer>
+    {% endblock ending%}
+    <el-backtop></el-backtop>
+</div>
+</body>
+<script language="JavaScript" src="/static/js/new_vue_instance.js"></script>
+<script>VueInstance({% block activeIndex%}'/index'{% endblock activeIndex%});</script>
+</html>
